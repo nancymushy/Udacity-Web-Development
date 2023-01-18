@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exercise 1</tittle>
+<meta
+ content="widht=device=width,initial-scale=1,maximum-scale=1"
+ name="viewpoint"
+/>
+<link rel="stylesheet"href="style.css">
+
+</head>
+<!--- add content to our section>
+  -clean up a bit
+  -add a second page-->
+<style>
+  
+  
+    .container{
+      /*step 1: set display to grid*/
+      display: grid;
+      width: 90vw;
+      margin:auto;
+      margin-top: 150px;
+      /* step 2:set rows and column */ 
+      /*grid-template-column: repeat(3, 1fr);*/
+       grid-template-columns: 30px repeat(8,1fr);
+      grid-template-rows: 70px 400px 1fr;
+      grid-template-areas:
+      "hd hd hd hd hd hd hd hd"
+      "sd sd main main main main main main"
+      "ft ft ft ft ft ft ft ft"
+      /* border: 2px solid yellow; */
+
+    }
+    .box{
+      width: 250px;
+      height: 150px;
+      border:  1px solid red;
+      background: #f8fA90; 
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+    .header{
+     /* row start/column start/row end/column end*/
+     grid-area:hd;
+  }
+  
+    .footer{
+     grid-area:ft;
+    }
+
+    .sidebar{
+      grid-area:sb;
+    }
+
+    .content{
+      grid-area:main;
+    }
+</style>
+  </head>
+
+    <body>
+      <div class ="container">
+        <div class ="header box">header</div>
+        <h1>the beauty of nature brings us all home</h1>
+        </div>
+        <div class="side box"><h1>blog posts</h1><a href="post.html">most recent post</div>
+        <div class ="content box">content</div> 
+        <div class ="footer box">footer</div> 
+      </div>
+    </body>
+</html>
